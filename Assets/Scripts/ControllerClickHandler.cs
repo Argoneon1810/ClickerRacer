@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ControllerClickHandler : MonoBehaviour, PlayerInjector{
+public class ControllerClickHandler : MonoBehaviour, IPlayerInjector{
     [SerializeField] JumpableController controller;
     [SerializeField] float biasMultiplier = .5f;
 
