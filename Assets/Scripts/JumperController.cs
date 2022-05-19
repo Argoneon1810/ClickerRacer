@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class JumpableController : MonoBehaviour {
+public class JumperController : MonoBehaviour {
     Rigidbody mRigidBody;
     [SerializeField] float multiplier = 200, torqueMultiplier;
     [SerializeField, Range(0,1)] float upVectorAmount = .4f;

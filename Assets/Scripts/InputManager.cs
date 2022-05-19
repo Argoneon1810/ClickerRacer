@@ -6,7 +6,7 @@ public class InputManager : MonoBehaviour {
 
     public event Action OnMouseLeftDown;
 
-    private void Start() {
+    private void Awake() {
         Instance = Instance ? Instance : this;
     }
     

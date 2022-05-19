@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class ControllerClickHandler : MonoBehaviour, IPlayerInjector{
-    [SerializeField] JumpableController controller;
+    [SerializeField] JumperController controller;
     [SerializeField] float biasMultiplier = .5f;
 
     private void Start() {
@@ -16,7 +16,7 @@ public class ControllerClickHandler : MonoBehaviour, IPlayerInjector{
         return ((Mathf.InverseLerp(0, Screen.currentResolution.width, mousePos.x) - .5f) * 2);
     }
 
-    public void AssignPlayer(JumpableController Player) {
+    public void AssignPlayer(JumperController Player) {
         controller = Player;
     }
 

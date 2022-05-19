@@ -1,5 +1,5 @@
 using System;
 
 public interface IPlayerInjector {
-    void AssignPlayer(JumpableController Player);
+    void AssignPlayer(JumperController Player);
 }

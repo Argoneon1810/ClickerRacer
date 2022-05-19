@@ -6,9 +6,9 @@ public class DebugJumpInput : MonoBehaviour, IPlayerInjector {
     [SerializeField] bool biasable;
     [SerializeField, ConditionalField("biasable")] Slider slider;
     [SerializeField, ConditionalField("biasable")] bool invert;
-    [SerializeField] JumpableController controller;
+    [SerializeField] JumperController controller;
 
-    public void AssignPlayer(JumpableController Player) {
+    public void AssignPlayer(JumperController Player) {
         controller = Player;
     }
 

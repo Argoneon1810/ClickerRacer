@@ -2,13 +2,12 @@ using UnityEngine;
 using Cinemachine;
 
 public class DynamicFollowPlayer : MonoBehaviour, IPlayerInjector {
-    CinemachineVirtualCamera mCamera;
+    [SerializeField] CinemachineVirtualCamera mCamera;
 
-    private void Awake() {
-        mCamera = GetComponent<CinemachineVirtualCamera>();
-    }
-
-    public void AssignPlayer(JumpableController Player) {
+    public void AssignPlayer(JumperController Player) {
+        if(mCamera == null)
+            mCamera = GetComponent<CinemachineVirtualCamera>();
+            
         mCamera.Follow = Player.transform;
         mCamera.LookAt = Player.transform;
     }

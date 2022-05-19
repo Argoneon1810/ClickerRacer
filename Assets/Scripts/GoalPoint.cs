@@ -1,14 +1,11 @@
 using UnityEngine;
 
-public class CheckPoint : MonoBehaviour {
-    [SerializeField] Transform respawnPoint;
-
+public class GoalPoint : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
-        RespawnManager.Instance.UpdateRespawnPointOf(respawnPoint, other.gameObject);
     }
 
     private void OnDrawGizmos() {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.yellow;
         Gizmos.matrix = transform.localToWorldMatrix;
         Gizmos.DrawWireCube(Vector3.zero, Vector3.one);
     }
