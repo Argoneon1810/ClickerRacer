@@ -6,6 +6,8 @@ public class InputManager : MonoBehaviour {
 
     public event Action OnMouseLeftDown;
 
+    public bool blockInput = false;
+
     private void Awake() {
         Instance = Instance ? Instance : this;
     }

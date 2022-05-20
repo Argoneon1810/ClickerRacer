@@ -56,8 +56,3 @@ public class JumperAI : MonoBehaviour {
         return true;
     }
 }
-
-public static class Extension {
-    public static bool IsNaN(this float value) => float.IsNaN(value);
-    public static int TakeSignOnly(this float value) => value > 0 ? 1 : -1;
-}
